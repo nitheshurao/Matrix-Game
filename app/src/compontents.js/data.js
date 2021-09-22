@@ -68,7 +68,7 @@ const data = [
     },
     {
         id: 14,
-        color: 'blue',
+        color: 'red',
         count: 0,
     },
     {

@@ -28,15 +28,27 @@ const Game = () => {
     // }
     const handleOptionChange = (p, option) => {
 
-
+        console.log(data)
         p[option] = !p[option];
+        if (p.color == 'blue') {
+            p.color = 'red'
+
+        }
         setColr([...colr, p])
         if (colr.length > 3) {
             // handleOptionChangess(, 'is1Selected')
-            console.log(colr.map)
+
+            // {names.filter(name => name.includes('J')).map(filteredName => (
+            //     <li>
+            //       {filteredName}
+            //     </li>
+            //   ))}
+
+
+            console.log(p.color)
 
         }
-        console.log(colr)
+        // console.log(colr)
 
 
         setCount(prevCount => prevCount + 1)
@@ -44,20 +56,28 @@ const Game = () => {
         console.log(p.count = count)
 
     };
-    const handleOptionChangess = (p, option) => {
+    // const handleOptionChange = (p, option) => {
+
+    //     console.log(data)
+    //     p[option] = !p[option];
+    //     if (p.color == 'blue') {
+    //         p.color = 'red'
+
+    //     }
+    //     setColr([...colr, p])
+    //     if (colr.length > 3) {
+    //         // handleOptionChangess(, 'is1Selected')
+    //         console.log(p.color)
+
+    //     }
+    //     // console.log(colr)
 
 
-        p[option] = !p[option];
+    //     setCount(prevCount => prevCount + 1)
 
+    //     console.log(p.count = count)
 
-        console.log(colr)
-
-
-
-
-
-
-    };
+    // };
 
 
     return (
@@ -66,11 +86,15 @@ const Game = () => {
                 <div >
 
                     <div className="grid-item">
-                        <button onClick={() => handleOptionChange(p, 'is1Selected')} style={{ backgroundColor: p.is1Selected ? 'red' : 'Blue' }} >
+                        {/* <button onClick={() => handleOptionChange(p, 'is1Selected')} style={{ backgroundColor: p.is1Selected ? 'red' : 'Blue' }} >
+                            {p.is1Selected ? `BOX# ${p.count}` : ''}
+                        </button> */}
+
+                        <button onClick={() => handleOptionChange(p, 'is1Selected')} style={{ backgroundColor: p.color }} >
                             {p.is1Selected ? `BOX# ${p.count}` : ''}
                         </button>
 
-
+                        {/* style={{ color: textColor }} */}
 
 
 
